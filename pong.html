@@ -4,8 +4,25 @@
 	<link rel="stylesheet" type="text/css" href="/css/game.css">
 </head>
 <body>
-	<p>foo</p>
-	<div>bar</div>
-	<script type="text/javascript" src="/js/client.js"></script>
+	<div id = "score">
+		<table id="scoreboard">
+			<tr>
+				<th>Player 1</th>
+				<td>score</td>
+			</tr>
+			<tr>
+				<th>Player 2</th>
+				<td>score</td>
+			</tr>
+		</table>
+	</div>
+<br>
+	<div id = "board">
+		<div class = "player" style="float: left;"> </div>
+		<div class = "player" style="float: right;"> </div>
+		<div class = "boundary"> </div> 
+		<div class = "puck"> </div>
+	</div>
+	<script type = "text/javascript" src = "/js/client.js"></script>
 </body>
 </html>
