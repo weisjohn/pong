@@ -11,9 +11,14 @@ table {
 	margin: 0 auto; /* I think it's better for the scoreboard to be in the center */
 }
 
+#wrapper {
+	/* TODO: intrisic ratios here */
+}
+
 #board {
 	position: relative;
 	height: 60%;
+	/* TODO: and here */
 }
 
 div.player { 
