@@ -12,6 +12,7 @@ table {
 }
 
 #board {
+	position: relative;
 	height: 60%;
 }
 
@@ -23,9 +24,17 @@ div.player {
 	width: 10px;
 }
 
+#one{
+	float:left;
+}
+
+#two{
+	float:right;
+}
+
 div.boundary {
 	position: absolute;
-	height: 60%; 
+	height: 100%; 
 	width: 50%;
 	border-right: 2px dashed;
 	border-top: 0;
@@ -40,6 +49,5 @@ div.puck {
 	width: 15px;
 	border-radius: 50%;
 	top:50%;
-	left:50.1%;/*Problem: this positioning is with respect to the entire browser window. I need it to be
-	with respect to the gameboard only. Also, the puck isn't centered properly.*/
+	left:49.5%;/*Problem: the puck isn't centered properly.*/
 }
