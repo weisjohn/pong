@@ -6,9 +6,9 @@
 
 table {
 	color: black;
-	float: right;
 	border: 1px solid;
 	height: fixed;
+	margin: 0 auto; /* I think it's better for the scoreboard to be in the center */
 }
 
 #board {
@@ -16,38 +16,43 @@ table {
 	height: 60%;
 }
 
-/*Should the players and the puck also be relatively sized to the browser?*/
-
 div.player { 
 	background: #000000;
 	height: 50px;
 	width: 10px;
 }
 
-#one{
+#one {
 	float:left;
 }
 
-#two{
+#two {
 	float:right;
 }
 
 div.boundary {
+	box-sizing: border-box;  
+	/* 
+	what was happening is this element was giving a width of 50% and then 2 extra pixels for the border on the right, 
+	which is why your puck looked "off" of center when it was really your eyes playing a trick on you... the box-sizing: border-box; rule
+	says to the browser "include the border into the width calculations, don't add the border onto the width" 
+	*/
 	position: absolute;
 	height: 100%; 
 	width: 50%;
-	border-right: 2px dashed;
-	border-top: 0;
-	border-left: 0;
-	border-bottom: 0;
+	border-right: 3px dashed;
 }
 
 div.puck {
 	position: absolute;
 	background: #000000;
-	height: 15px;
-	width: 15px;
+	height: 16px;
+	width: 16px;
 	border-radius: 50%;
-	top:50%;
-	left:49.5%;/*Problem: the puck isn't centered properly.*/
+	top: 50%;
+	left: 50%;
+	margin-left: -9px;	/* this needs to be 1/2 of the width + 1px (the boundary border is 3 pixels, so 1.5 rounds to 1px ) */
+
+	/* instead of using a left of 49.5% where the missing 0.5% is to make up for the width of the item, I put it at a position of left 50%,
+	 then the negative margin is what I use to center the item about it's  */
 }
