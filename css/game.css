@@ -1,7 +1,6 @@
 
 #score {
-	height: 19%; /*This percentage is a bit excessive, but it keeps the game board from ever getting messed up by the
-	scoreboard in my browser sizing at least. */
+/*adding the wrapper allowed me to get rid of the height specification here*/
 }
 
 table {
@@ -12,13 +11,15 @@ table {
 }
 
 #wrapper {
-	/* TODO: intrisic ratios here */
+	position: relative;
+	padding-top: 40%;
 }
 
 #board {
-	position: relative;
-	height: 60%;
-	/* TODO: and here */
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 10px;
 }
 
 div.player { 
